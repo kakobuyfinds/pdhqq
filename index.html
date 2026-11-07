@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#243c36">
+  <title>CSSBuy spreadsheet — kategorie, rozmiary i poradnik QC</title>
+  <meta name="description" content="CSSBuy spreadsheet po polsku: odkryj kategorie, sprawdź rozmiary i zdjęcia QC oraz przygotuj budżet zakupów z dostawą. Praktyczny przewodnik i FAQ.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="CSSBuy spreadsheet — wybieraj świadomie">
+  <meta property="og:description" content="Buty, ubrania i dodatki. Polski przewodnik po porównywaniu ofert, wymiarach, zdjęciach QC i kosztach dostawy.">
+  <meta property="og:image" content="https://www.famousfootwear.com/blob/product-images/20000/43/70/9/43709_pair_feed1000.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CSSBuy spreadsheet — wybieraj świadomie">
+  <meta name="twitter:description" content="Kategorie i praktyczne wskazówki: rozmiary, zdjęcia QC, oferty oraz budżet zakupów.">
+  <meta name="twitter:image" content="https://www.famousfootwear.com/blob/product-images/20000/43/70/9/43709_pair_feed1000.jpg">
+  <link rel="preconnect" href="https://www.famousfootwear.com">
+  <style>
+    :root{--paper:#f5f2e9;--white:#fffef9;--ink:#20332e;--muted:#54645d;--line:#d6dacf;--green:#243c36;--lime:#e5eea5;--orange:#a34e2c;--radius:20px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit;text-underline-offset:4px}
+    a:focus-visible,summary:focus-visible{outline:3px solid var(--orange);outline-offset:5px}
+    img{display:block;max-width:100%;height:auto;background:#fff}
+    h1,h2,h3,p,figure{margin:0}
+    h1,h2,h3{line-height:1.12;letter-spacing:-.045em}
+    h1{font-size:clamp(2.8rem,6.4vw,5.7rem);max-width:13ch}
+    h2{font-size:clamp(2rem,3.7vw,3.1rem)}
+    h3{font-size:1.35rem;letter-spacing:-.025em}
+    p+p{margin-top:14px}
+    .wrap{width:min(1160px,calc(100% - 40px));margin-inline:auto}
+    .top{border-bottom:1px solid var(--line)}
+    .top-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:22px}
+    .logo{font-size:1.15rem;letter-spacing:-.04em;font-weight:850;text-decoration:none;overflow-wrap:anywhere}
+    .edition{font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+    .category-section{padding-block:27px}
+    .section-label{font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+    .category-header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:13px}
+    .category-header span{font-size:.85rem;color:var(--muted)}
+    .categories{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+    .categories a{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:53px;padding:10px 13px;background:var(--white);border:1px solid var(--line);border-radius:9px;text-decoration:none;font-size:.86rem;font-weight:650}
+    .categories a::after{content:"↗";color:var(--orange)}
+    .categories a:hover{border-color:var(--green);background:var(--lime)}
+    .hero{display:grid;grid-template-columns:1.12fr 1fr;border-radius:var(--radius);overflow:hidden;background:var(--green);color:var(--white)}
+    .hero-copy{padding:44px 37px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+    .hero .section-label{color:var(--lime);margin-bottom:23px}
+    .hero h1 span{color:var(--lime)}
+    .lead{font-size:1.08rem;color:#e1e8e1;max-width:43ch;margin-top:25px}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:20px;padding:13px 20px;border-radius:8px;background:var(--lime);color:var(--green);font-weight:800;text-decoration:none}
+    .hero .button{margin-top:27px}
+    .hero-note{font-size:.76rem;color:#ccd8cf;margin-top:18px}
+    .hero figure{display:flex;flex-direction:column;background:#fff;color:var(--muted);min-width:0}
+    .hero figure img{width:100%;flex:1;min-height:330px;object-fit:contain;padding:22px}
+    figcaption{padding:15px 20px;font-size:.78rem;line-height:1.5;background:#eeeee6}
+    .quick-answer{display:grid;grid-template-columns:180px 1fr;gap:25px;padding:30px 0;border-bottom:1px solid var(--line)}
+    .quick-answer .section-label{color:var(--orange);padding-top:4px}
+    .quick-answer p{max-width:78ch}
+    .block{padding-block:57px}
+    .block-heading{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end;margin-bottom:28px}
+    .block-heading p{color:var(--muted);max-width:55ch}
+    .block-heading .section-label{display:block;margin-bottom:13px;color:var(--orange)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .step{border-top:2px solid var(--green);padding:19px 4px 0}
+    .number{display:inline-block;font-size:.8rem;color:var(--orange);font-weight:850;margin-bottom:19px}
+    .step h3{margin-bottom:13px}
+    .step p{font-size:.94rem;color:var(--muted)}
+    .editorial{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .visual-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+    .visual-card img{width:100%;height:300px;object-fit:contain}
+    .visual-card .copy{padding:25px}
+    .visual-card h3{margin-bottom:13px}
+    .visual-card p{color:var(--muted);font-size:.95rem}
+    .text-link{display:inline-block;margin-top:18px;font-weight:800;font-size:.9rem}
+    .note{margin-top:19px;color:var(--muted);font-size:.82rem;max-width:95ch}
+    .feature{background:var(--lime);border-radius:var(--radius);padding:36px;display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}
+    .feature h2{margin-top:13px}
+    .table-scroll{overflow-x:auto}
+    table{width:100%;border-collapse:collapse;font-size:.9rem}
+    th,td{padding:13px 10px;text-align:left;vertical-align:top;border-bottom:1px solid #bbc583}
+    th{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em}
+    .articles{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
+    .article{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+    .article .section-label{color:var(--orange);display:block;margin-bottom:18px}
+    .article h3{margin-bottom:17px}
+    .article p{font-size:.93rem;color:var(--muted)}
+    .article ul{padding-left:20px;font-size:.92rem}
+    .article li+li{margin-top:9px}
+    .faq-layout{display:grid;grid-template-columns:.65fr 1.35fr;gap:50px}
+    .faq-layout header p{color:var(--muted);margin-top:18px}
+    details{border-bottom:1px solid var(--line);padding:19px 0}
+    details:first-child{padding-top:0}
+    summary{cursor:pointer;font-weight:750;padding-right:15px}
+    details p{margin-top:13px;color:var(--muted);font-size:.95rem}
+    .closing{background:var(--green);color:var(--white);border-radius:var(--radius);padding:32px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+    .closing h2{font-size:1.8rem;letter-spacing:-.03em}
+    .closing p{color:#d9e3da;margin-top:9px}
+    footer{padding:29px 0 35px;color:var(--muted);font-size:.8rem}
+    footer p{max-width:100ch}
+    @media(min-width:801px){.articles,.editorial{content-visibility:auto;contain-intrinsic-size:auto 600px}}
+    @media(max-width:1000px){.categories{grid-template-columns:repeat(3,1fr)}.hero-copy{padding:32px 25px}.steps{grid-template-columns:repeat(2,1fr);gap:28px}.articles{grid-template-columns:1fr}.feature{grid-template-columns:1fr;gap:23px}}
+    @media(max-width:700px){.wrap{width:calc(100% - 28px)}.top-inner{padding-block:17px}.edition{font-size:.65rem;letter-spacing:.07em}.logo{font-size:1rem}.categories{grid-template-columns:repeat(2,minmax(0,1fr))}.category-header span{display:none}.categories a{font-size:.78rem;padding:10px}.hero{grid-template-columns:1fr}.hero-copy{padding:33px 25px}.hero figure img{min-height:0;height:260px;padding:12px}.hero h1{max-width:15ch}.quick-answer{grid-template-columns:1fr;gap:11px}.block{padding-block:38px}.block-heading,.editorial,.faq-layout{grid-template-columns:1fr;gap:22px}.visual-card img{height:260px}.feature{padding:24px 18px}.closing{align-items:flex-start;flex-direction:column;padding:25px}.closing .button{width:100%}.steps{gap:25px 18px}.step h3{font-size:1.18rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "@id":"#strona",
+        "name":"CSSBuy spreadsheet — kategorie, rozmiary i poradnik QC",
+        "description":"Polski przewodnik po wybieraniu ofert, tabelach rozmiarów, zdjęciach QC i planowaniu kosztów zakupów.",
+        "inLanguage":"pl",
+        "mainEntity":{"@id":"#poradnik"}
+      },
+      {
+        "@type":"Article",
+        "@id":"#poradnik",
+        "headline":"CSSBuy spreadsheet: od inspiracji do przemyślanego wyboru",
+        "description":"Jak porównać oferty, sprawdzić wymiary, ocenić zdjęcia QC i policzyć całkowity koszt zamówienia.",
+        "inLanguage":"pl",
+        "author":{"@type":"Organization","name":"HipobuyFind"},
+        "about":[
+          {"@type":"Thing","name":"Porównywanie ofert"},
+          {"@type":"Thing","name":"Dobór rozmiaru"},
+          {"@type":"Thing","name":"Kontrola zdjęć QC"},
+          {"@type":"Thing","name":"Planowanie kosztów dostawy"}
+        ]
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"#pytania",
+        "inLanguage":"pl",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Co to jest CSSBuy spreadsheet?",
+            "acceptedAnswer":{"@type":"Answer","text":"CSSBuy spreadsheet to lista lub katalog odnośników do produktów używany do wstępnego porównania ofert. Nie zastępuje aktualnej oferty sprzedawcy, płatności ani obsługi zamówienia."}
+          },
+          {
+            "@type":"Question",
+            "name":"Czy ta strona jest oficjalną stroną CSSBuy?",
+            "acceptedAnswer":{"@type":"Answer","text":"Nie. To niezależny poradnik po polsku. Odnośniki do katalogu prowadzą do HipobuyFind, a strona nie reprezentuje CSSBuy ani pokazanych marek."}
+          },
+          {
+            "@type":"Question",
+            "name":"Jak dobrać rozmiar butów i ubrań?",
+            "acceptedAnswer":{"@type":"Answer","text":"Porównaj długość stopy w centymetrach z tabelą konkretnego modelu. Przy ubraniach zmierz pasującą rzecz na płasko i zestaw jej wymiary z ofertą. Sam rozmiar EU lub oznaczenie M nie wystarcza."}
+          },
+          {
+            "@type":"Question",
+            "name":"Czy zdjęcia QC potwierdzają autentyczność?",
+            "acceptedAnswer":{"@type":"Answer","text":"Nie. Zdjęcia QC pomagają ocenić widoczne cechy, zgodność wariantu i ewentualne uszkodzenia. Nie są certyfikatem autentyczności ani badaniem jakości materiału."}
+          },
+          {
+            "@type":"Question",
+            "name":"Czy cena produktu obejmuje dostawę do Polski?",
+            "acceptedAnswer":{"@type":"Answer","text":"Nie należy tego zakładać. Sprawdź osobno cenę produktu, dostawę krajową, opłaty pośrednika, przewalutowanie, przesyłkę międzynarodową oraz ewentualne podatki i należności importowe."}
+          },
+          {
+            "@type":"Question",
+            "name":"Co zrobić, gdy link do produktu przestaje działać?",
+            "acceptedAnswer":{"@type":"Answer","text":"Wróć do kategorii i wyszukaj model ponownie. Porównaj sprzedawcę, zdjęcia, wariant oraz wymiary. Podobna miniatura nie oznacza, że jest to ta sama oferta."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/pdhqq/">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="logo" href="https://www.hipobuyfind.com">hipobuyfind.com</a>
+      <span class="edition">Notatnik zakupowy / PL</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="category-section" aria-label="Kategorie produktów">
+      <div class="category-header">
+        <p class="section-label">Zacznij od kategorii</p>
+        <span>Wybierz dział i porównaj szczegóły ofert</span>
+      </div>
+      <nav class="categories" aria-label="Przejdź do kategorii w HipobuyFind">
+        <a href="https://hipobuyfind.com/category-911-Shoes.html">Shoes · Buty</a>
+        <a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">Hoodies/Sweaters</a>
+        <a href="https://hipobuyfind.com/category-913-T-Shirts.html">T-Shirts · Koszulki</a>
+        <a href="https://hipobuyfind.com/category-914-Jackets.html">Jackets · Kurtki</a>
+        <a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">Pants/Shorts</a>
+        <a href="https://hipobuyfind.com/category-916-Headwear.html">Headwear · Czapki</a>
+        <a href="https://hipobuyfind.com/category-917-Sets.html">Sets · Komplety</a>
+        <a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">Underwear/underpants</a>
+        <a href="https://hipobuyfind.com/category-919-Jersey.html">Jersey · Koszulki sportowe</a>
+        <a href="https://hipobuyfind.com/category-920-Accessories.html">Accessories · Dodatki</a>
+      </nav>
+    </section>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="section-label">Mniej zgadywania. Więcej konkretów.</p>
+        <h1 id="hero-title">CSSBuy spreadsheet.<br><span>Wybieraj świadomie.</span></h1>
+        <p class="lead">Zacznij od stylu, zdecyduj na podstawie szczegółów. Porównuj buty, ubrania i dodatki, sprawdzaj wymiary oraz planuj koszt całego zamówienia.</p>
+        <a class="button" href="https://www.hipobuyfind.com">Otwórz katalog HipobuyFind <span aria-hidden="true">↗</span></a>
+        <p class="hero-note">Niezależny przewodnik • Bez deklaracji oficjalnej współpracy</p>
+      </div>
+      <figure>
+        <img src="https://www.famousfootwear.com/blob/product-images/20000/43/70/9/43709_pair_feed1000.jpg"
+             width="1000" height="1000"
+             alt="Para białych sneakersów Nike z szarym logo Swoosh i jasnymi podeszwami"
+             fetchpriority="high" loading="eager" decoding="async">
+        <figcaption>01 / Obuwie — porównuj kształt, rozmiar i opis materiałów. Zdjęcie jest ilustracją, a nie potwierdzeniem dostępności w katalogu.</figcaption>
+      </figure>
+    </section>
+
+    <aside class="quick-answer" aria-label="Krótka odpowiedź">
+      <p class="section-label">Co oznacza ta nazwa?</p>
+      <p><strong>CSSBuy spreadsheet to lista lub katalog linków do produktów, który pomaga porównywać oferty.</strong> Traktuj go jako punkt wyjścia: przed zakupem zweryfikuj sprzedawcę, wariant, tabelę rozmiarów i pełny koszt. Przycisk powyżej otwiera HipobuyFind; obsługa zamówienia odbywa się w wybranym serwisie zakupowym.</p>
+    </aside>
+
+    <section class="block" aria-labelledby="process-title">
+      <div class="block-heading">
+        <div>
+          <span class="section-label">Przewodnik dla początkujących</span>
+          <h2 id="process-title">Cztery decyzje przed zakupem.</h2>
+        </div>
+        <p>Dobry CSSBuy poradnik zakupowy zaczyna się od konkretnego produktu. Nazwa marki i atrakcyjna fotografia nie wystarczą do oceny dopasowania ani warunków oferty.</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <span class="number">01 / OFERTA</span>
+          <h3>Zapisz właściwy link</h3>
+          <p>Gdy przeglądasz CSSBuy linki do produktów, zachowaj adres oferty źródłowej, nazwę sprzedawcy i wybrany wariant. Link do całej kategorii nie wskazuje konkretnego artykułu.</p>
+        </article>
+        <article class="step">
+          <span class="number">02 / WYMIARY</span>
+          <h3>Porównaj centymetry</h3>
+          <p>Dobór rozmiaru butów oprzyj na tabeli modelu. Przy bluzie sprawdź szerokość pod pachami, długość oraz rękaw; przy spodniach pas i długość nogawki.</p>
+        </article>
+        <article class="step">
+          <span class="number">03 / ZDJĘCIA</span>
+          <h3>Obejrzyj szczegóły</h3>
+          <p>CSSBuy QC zdjęcia analizuj pod kątem koloru, rozmiaru, szwów i zgodności wariantu. Jeśli brakuje ujęcia etykiety lub pomiaru, poproś o nie przed kolejną decyzją.</p>
+        </article>
+        <article class="step">
+          <span class="number">04 / BUDŻET</span>
+          <h3>Policz całość</h3>
+          <p>CSSBuy koszt wysyłki rozpatruj razem z ceną towaru i pozostałymi opłatami. Masa, wymiary paczki i kierunek dostawy mogą zmienić końcową kalkulację.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="style-title">
+      <div class="block-heading">
+        <div>
+          <span class="section-label">Dossier stylu</span>
+          <h2 id="style-title">Sportowa baza.<br>Wyrazisty detal.</h2>
+        </div>
+        <p>Inspiracje Nike, Louis Vuitton, Gucci i Dior pokazują różne kierunki estetyczne. Oceniaj konkretny przedmiot: zdjęcie marki nie potwierdza pochodzenia produktu w innej ofercie.</p>
+      </div>
+      <div class="editorial">
+        <article class="visual-card">
+          <img src="https://brandstreettokyo.shop/cdn/shop/files/TOP_3_0bf82bd4-2b04-44db-bc8f-8171a8403732.jpg?width=800"
+               width="800" height="600"
+               alt="Torebki Louis Vuitton, Gucci i Dior ustawione na jasnych, stopniowanych podestach"
+               loading="lazy" decoding="async">
+          <div class="copy">
+            <h3>Akcesoria: proporcje mają znaczenie</h3>
+            <p>Porównywanie torebek zacznij od wymiarów, długości paska i sposobu zamknięcia. Sprawdź zdjęcia wnętrza torebki oraz opis okuć. Przy biżuterii potrzebne są skład materiałowy, obwód i rodzaj zapięcia.</p>
+            <a class="text-link" href="https://hipobuyfind.com/category-920-Accessories.html">Przejrzyj dodatki ↗</a>
+          </div>
+        </article>
+        <article class="visual-card">
+          <img src="https://endxloset.com/cdn/shop/files/856d32d6_1200x1200.jpg?v=1775734479"
+               width="1200" height="1200"
+               alt="Beżowa i czarna czapka z daszkiem ze wzorem GG i naszywkami Gucci"
+               loading="lazy" decoding="async">
+          <div class="copy">
+            <h3>Czapki: sprawdź kształt i regulację</h3>
+            <p>Dobór czapki z daszkiem zależy od obwodu, głębokości korony i profilu daszka. Przy odzieży porównaj skład tkaniny oraz krój; przy dodatkach do włosów także wymiary i sposób mocowania.</p>
+            <a class="text-link" href="https://hipobuyfind.com/category-916-Headwear.html">Zobacz nakrycia głowy ↗</a>
+          </div>
+        </article>
+      </div>
+      <p class="note">Fotografie mają charakter poglądowy i pochodzą z zewnętrznych serwisów. Nie stanowią oferty sprzedaży ani potwierdzenia autentyczności, zapasów lub współpracy z przedstawionymi markami.</p>
+    </section>
+
+    <section class="feature" aria-labelledby="check-title">
+      <div>
+        <span class="section-label">Lista kontrolna</span>
+        <h2 id="check-title">Co sprawdzić w każdej kategorii?</h2>
+        <p style="margin-top:18px">Porównuj te same parametry w dwóch ofertach. Dzięki temu różnica w cenie ma czytelny kontekst.</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <caption style="text-align:left;font-weight:750;margin-bottom:10px">Parametry przydatne przy porównywaniu produktów</caption>
+          <thead>
+            <tr><th scope="col">Kategoria</th><th scope="col">Najważniejsze dane</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Buty</th><td>Tabela rozmiarów, długość stopy, szerokość, podeszwa i etykieta wariantu.</td></tr>
+            <tr><th scope="row">Bluzy i swetry</th><td>Szerokość pod pachami, rękaw, długość, skład i sposób pielęgnacji.</td></tr>
+            <tr><th scope="row">Koszulki i jersey</th><td>Krój, długość, przewiewność materiału, nadruk lub haft.</td></tr>
+            <tr><th scope="row">Kurtki i komplety</th><td>Wymiary każdej części, podszewka, zapięcia i opis ocieplenia.</td></tr>
+            <tr><th scope="row">Spodnie i bielizna</th><td>Obwód pasa, rozciągliwość, długość nogawki oraz zasady zwrotu.</td></tr>
+            <tr><th scope="row">Czapki i dodatki</th><td>Obwód, regulacja, skład materiałowy, wymiary i zapięcia.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="articles-title">
+      <div class="block-heading">
+        <div>
+          <span class="section-label">Artykuły tematyczne</span>
+          <h2 id="articles-title">Przeczytaj przed finalizacją.</h2>
+        </div>
+        <p>Trzy krótkie opracowania, które pomagają zamienić listę inspiracji w uporządkowany plan zakupów.</p>
+      </div>
+      <div class="articles">
+        <article class="article">
+          <span class="section-label">01 / Rozmiar</span>
+          <h3>Jak czytać tabelę rozmiarów bez zgadywania?</h3>
+          <p>Przy porównywaniu rozmiarów ubrań ważniejszy jest sposób pomiaru niż sama litera na metce. Zmierz pasującą rzecz na płasko i sprawdź, czy sprzedawca podaje szerokość, czy pełny obwód.</p>
+          <ul>
+            <li><strong>Bluza oversize:</strong> zestaw szerokość ramion, klatki i długość rękawa.</li>
+            <li><strong>Spodnie i szorty:</strong> sprawdź pas w spoczynku, stan oraz długość wewnętrzną.</li>
+            <li><strong>Buty sportowe:</strong> odróżnij długość wkładki od zalecanej długości stopy.</li>
+          </ul>
+          <p>Jeśli tabela rozmiarów jest nieczytelna, poproś o wyjaśnienie przed płatnością. Nie przenoś automatycznie rozmiaru z innego modelu.</p>
+          <a class="text-link" href="https://www.hipobuyfind.com">Porównaj informacje w katalogu ↗</a>
+        </article>
+
+        <article class="article">
+          <span class="section-label">02 / Kontrola</span>
+          <h3>Jak oceniać zdjęcia QC i ich ograniczenia?</h3>
+          <p>Kontrola jakości na zdjęciach pomaga wykryć widoczne różnice, lecz nie zastępuje badania produktu. Najpierw potwierdź rozmiar i kolor, później obejrzyj detale.</p>
+          <ul>
+            <li><strong>Zdjęcia szwów:</strong> poszukaj rozpruć, nierównych łączeń i uszkodzeń.</li>
+            <li><strong>Zdjęcia etykiety:</strong> porównaj oznaczenie wariantu z zamówieniem.</li>
+            <li><strong>Pomiar produktu:</strong> poproś o kadr z miarką, gdy dopasowanie budzi wątpliwości.</li>
+          </ul>
+          <p>Oświetlenie może zmieniać odbiór koloru. Autentyczność markowych produktów wymaga odrębnej weryfikacji pochodzenia; logo widoczne na fotografii jej nie dowodzi.</p>
+          <a class="text-link" href="https://www.hipobuyfind.com">Przejrzyj opisy i fotografie ↗</a>
+        </article>
+
+        <article class="article">
+          <span class="section-label">03 / Dostawa</span>
+          <h3>Jak zaplanować budżet przesyłki do Polski?</h3>
+          <p>Całkowity koszt zamówienia obejmuje więcej niż cenę produktu. Zapisz walutę rozliczenia i porównuj oferty dopiero po uwzględnieniu wszystkich znanych składników.</p>
+          <ul>
+            <li><strong>Przed magazynem:</strong> towar, dostawa krajowa i opłaty za obsługę.</li>
+            <li><strong>Przed wysyłką:</strong> pakowanie, masa rzeczywista i masa wymiarowa.</li>
+            <li><strong>Przy imporcie:</strong> sprawdź aktualne zasady podatkowe i warunki wybranej trasy.</li>
+          </ul>
+          <p>Kalkulator wysyłki daje orientację. Ostateczną wycenę sprawdź po zapakowaniu; konsolidacja paczki nie gwarantuje oszczędności w każdym przypadku.</p>
+          <a class="text-link" href="https://www.hipobuyfind.com">Wróć do porównywania produktów ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="block faq-layout" aria-labelledby="faq-title">
+      <header>
+        <p class="section-label">Odpowiedzi wprost</p>
+        <h2 id="faq-title" style="margin-top:13px">FAQ przed pierwszym wyborem.</h2>
+        <p>Najczęstsze pytania o katalog, dopasowanie, kontrolę zdjęć oraz koszt dostawy.</p>
+      </header>
+      <div>
+        <details open>
+          <summary>Co to jest CSSBuy spreadsheet?</summary>
+          <p>CSSBuy spreadsheet to lista lub katalog odnośników do produktów używany do wstępnego porównania ofert. Nie zastępuje aktualnej oferty sprzedawcy, płatności ani obsługi zamówienia.</p>
+        </details>
+        <details>
+          <summary>Czy ta strona jest oficjalną stroną CSSBuy?</summary>
+          <p>Nie. To niezależny poradnik po polsku. Odnośniki do katalogu prowadzą do HipobuyFind, a strona nie reprezentuje CSSBuy ani pokazanych marek.</p>
+        </details>
+        <details>
+          <summary>Jak dobrać rozmiar butów i ubrań?</summary>
+          <p>Porównaj długość stopy w centymetrach z tabelą konkretnego modelu. Przy ubraniach zmierz pasującą rzecz na płasko i zestaw jej wymiary z ofertą. Sam rozmiar EU lub oznaczenie M nie wystarcza.</p>
+        </details>
+        <details>
+          <summary>Czy zdjęcia QC potwierdzają autentyczność?</summary>
+          <p>Nie. Zdjęcia QC pomagają ocenić widoczne cechy, zgodność wariantu i ewentualne uszkodzenia. Nie są certyfikatem autentyczności ani badaniem jakości materiału.</p>
+        </details>
+        <details>
+          <summary>Czy cena produktu obejmuje dostawę do Polski?</summary>
+          <p>Nie należy tego zakładać. Sprawdź osobno cenę produktu, dostawę krajową, opłaty pośrednika, przewalutowanie, przesyłkę międzynarodową oraz ewentualne podatki i należności importowe.</p>
+        </details>
+        <details>
+          <summary>Co zrobić, gdy link do produktu przestaje działać?</summary>
+          <p>Wróć do kategorii i wyszukaj model ponownie. Porównaj sprzedawcę, zdjęcia, wariant oraz wymiary. Podobna miniatura nie oznacza, że jest to ta sama oferta.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="closing" aria-label="Przejdź do katalogu">
+      <div>
+        <h2>Najpierw porównaj. Potem zdecyduj.</h2>
+        <p>Zapisz model, wymiary i pytania do sprzedawcy.</p>
+      </div>
+      <a class="button" href="https://www.hipobuyfind.com">Przeglądaj HipobuyFind <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p><strong>hipobuyfind.com</strong> · Polski przewodnik zakupowy.</p>
+    <p>Nazwy Nike, Louis Vuitton, Gucci, Hermès, Dior i CSSBuy należą do ich właścicieli. Ich użycie ma charakter opisowy. Treści pomagają porównywać oferty i nie stanowią gwarancji jakości, autentyczności ani warunków dostawy.</p>
+    <!--
+      Plik: index.html
+      Główna fraza: CSSBuy spreadsheet.
+      Frazy pomocnicze: CSSBuy poradnik zakupowy; CSSBuy linki do produktów;
+      CSSBuy QC zdjęcia; CSSBuy koszt wysyłki.
+      Intencje długiego ogona rozwinięte w treści: dobór rozmiaru butów;
+      porównywanie rozmiarów ubrań; tabela rozmiarów konkretnego modelu;
+      długość stopy w centymetrach; długość wkładki; szerokość pod pachami;
+      długość rękawa; długość wewnętrzna nogawki; pas w spoczynku;
+      dobór czapki z daszkiem; obwód i regulacja czapki; zdjęcia wnętrza torebki;
+      skład materiałowy biżuterii; rodzaj zapięcia; kontrola jakości na zdjęciach;
+      zdjęcia szwów; zdjęcia etykiety; pomiar produktu z miarką;
+      weryfikacja pochodzenia produktu; oferta źródłowa; zgodność wariantu;
+      całkowity koszt zamówienia; dostawa krajowa; opłaty za obsługę;
+      koszt przesyłki do Polski; masa rzeczywista; masa wymiarowa;
+      konsolidacja paczki; kalkulator wysyłki; waluta rozliczenia.
+      Synteza tematów z dziesięciu wyników wyszukiwania:
+      cssbuyhome.com; cssbuysh.com; cssbuysspreadsheet.com;
+      rep.tools/guides/cssbuy-spreadsheet; cssbuyfind.com; cssbuymall.com;
+      cssbuyluxe.com; spreadsheetcssbuy.net; cssbuy.co.uk/guide; cssbuy.fit.
+      Nie skopiowano ich tekstów ani deklaracji cenowych i liczbowych.
+      Bezpośrednia strona Google była niedostępna; kolejność dziesięciu
+      wyników Google nie została potwierdzona.
+      Canonical należy ustawić po ustaleniu rzeczywistego adresu publikacji.
+    -->
+  </footer>
+</body>
+</html>
